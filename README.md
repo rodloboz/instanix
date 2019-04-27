@@ -1,4 +1,4 @@
-## Instanix: Instagram Clone
+## Instanix: A Phoenix Instagram Clone
 
 # Stack
 
