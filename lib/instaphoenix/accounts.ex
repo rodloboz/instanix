@@ -8,6 +8,11 @@ defmodule Instaphoenix.Accounts do
 
   alias Instaphoenix.Accounts.User
 
+  def get_by_email_or_username(string) do
+    from(u in User, where: u.username == ^string or u.email == ^string)
+    |> Repo.one
+  end
+
   @doc """
   Returns the list of users.
 

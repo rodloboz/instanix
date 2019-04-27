@@ -17,6 +17,10 @@ Clone:
 
     git clone git@github.com:rodloboz/instaphoenix.git
 
+Dependencies:
+
+    mix deps.get
+
 Setup database and seeds:
 
     mix ecto.setup

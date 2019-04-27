@@ -40,7 +40,7 @@ defmodule InstaphoenixWeb do
       use Phoenix.HTML
 
       import InstaphoenixWeb.ErrorHelpers
-      import InstaphoenixWeb.LayoutHelpers
+      import InstaphoenixWeb.Helpers.Auth, only: [signed_in?: 1]
       import InstaphoenixWeb.Gettext
       alias InstaphoenixWeb.Router.Helpers, as: Routes
       def render_shared(template, assigns \\ []) do

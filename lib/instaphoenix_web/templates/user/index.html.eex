@@ -5,9 +5,7 @@
     <tr>
       <th>Username</th>
       <th>Email</th>
-      <th>Encrypted password</th>
       <th>Full name</th>
-      <th>About</th>
 
       <th></th>
     </tr>
@@ -17,15 +15,8 @@
     <tr>
       <td><%= user.username %></td>
       <td><%= user.email %></td>
-      <td><%= user.encrypted_password %></td>
       <td><%= user.full_name %></td>
       <td><%= user.about %></td>
-
-      <td>
-        <%= link "Show", to: Routes.user_path(@conn, :show, user) %>
-        <%= link "Edit", to: Routes.user_path(@conn, :edit, user) %>
-        <%= link "Delete", to: Routes.user_path(@conn, :delete, user), method: :delete, data: [confirm: "Are you sure?"] %>
-      </td>
     </tr>
 <% end %>
   </tbody>

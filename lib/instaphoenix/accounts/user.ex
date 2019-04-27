@@ -1,6 +1,7 @@
 defmodule Instaphoenix.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
+  alias Comeonin.Bcrypt
 
   schema "users" do
     field :about, :string
@@ -16,8 +17,10 @@ defmodule Instaphoenix.Accounts.User do
   def changeset(user, attrs) do
     user
     |> cast(attrs, [:username, :email, :encrypted_password, :full_name, :about])
-    |> validate_required([:username, :email, :encrypted_password, :full_name, :about])
+    |> validate_required([:username, :email, :encrypted_password, :full_name])
     |> unique_constraint(:username)
     |> unique_constraint(:email)
+    |> update_change(:encrypted_password, &Bcrypt.hashpwsalt/1)
+    |> validate_format(:username, ~r/\A(?=.*[a-z])[a-z\d]+\Z/i)
   end
 end

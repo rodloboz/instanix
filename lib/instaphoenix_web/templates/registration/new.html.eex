@@ -15,7 +15,7 @@
         <div class="form-inputs">
 
           <div class="form-group">
-            <%= text_input f, :email, placeholder: "Email" %>
+            <%= email_input f, :email, placeholder: "Email", required: true %>
             <%= error_tag f, :email %>
           </div>
 
@@ -45,7 +45,7 @@
   <div class="bg-white text-center border mb-2 py-2">
     <p class="text-gray-600 text-sm m-3">
       Have an account?
-      <%#= link_to "Log in", new_session_path(resource_name), class: 'text-blue-800 font-bold' %>
+      <%= link "Log in", to: Routes.session_path(@conn, :new), class: 'text-blue-800 font-bold' %>
     </p>
   </div>
 </div>
