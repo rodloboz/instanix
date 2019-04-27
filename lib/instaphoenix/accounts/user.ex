@@ -9,6 +9,7 @@ defmodule Instaphoenix.Accounts.User do
     field :encrypted_password, :string
     field :full_name, :string
     field :username, :string
+    field :avatar, :string
 
     timestamps()
   end

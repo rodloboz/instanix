@@ -41,6 +41,7 @@ defmodule InstaphoenixWeb do
 
       import InstaphoenixWeb.ErrorHelpers
       import InstaphoenixWeb.Helpers.Auth, only: [signed_in?: 1]
+      import InstaphoenixWeb.Helpers.Images, only: [avatar_url: 2]
       import InstaphoenixWeb.Gettext
       alias InstaphoenixWeb.Router.Helpers, as: Routes
       def render_shared(template, assigns \\ []) do

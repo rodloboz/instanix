@@ -9,6 +9,10 @@ defmodule InstaphoenixWeb.Router do
     plug :put_secure_browser_headers
   end
 
+  pipeline :with_session do
+    plug InstaphoenixWeb.Helpers.CurrentUser
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -18,7 +22,7 @@ defmodule InstaphoenixWeb.Router do
   end
 
   scope "/", InstaphoenixWeb do
-    pipe_through :browser
+    pipe_through [:browser, :with_session]
 
     get "/", UserController, :index
     get "/accounts/emailsignup/", RegistrationController, :new

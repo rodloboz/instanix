@@ -20,7 +20,7 @@ defmodule Instaphoenix.MixProject do
   def application do
     [
       mod: {Instaphoenix.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :httpoison]
     ]
   end
 
@@ -44,7 +44,8 @@ defmodule Instaphoenix.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:bcrypt_elixir, "~> 1.0"},
-      {:comeonin, "~> 4.0"}
+      {:comeonin, "~> 4.0"},
+      {:httpoison, "~> 1.5"}
     ]
   end
 
