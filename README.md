@@ -14,6 +14,7 @@
 # Setup
 
 Clone:
+
     git clone git@github.com:rodloboz/instaphoenix.git
 
 Setup database and seeds:
