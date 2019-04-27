@@ -30,6 +30,8 @@ defmodule InstanixWeb.Router do
     get "/accounts/login/", SessionController, :new
     post "/accounts/login/", SessionController, :create
     delete "/accounts/logout/", SessionController, :delete
+
+    get "/:username", UserController, :show
   end
 
   # Other scopes may use custom stacks.

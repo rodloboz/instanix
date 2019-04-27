@@ -12,6 +12,13 @@ defmodule Instanix.Accounts do
     from(u in User, where: u.username == ^string or u.email == ^string)
     |> Repo.one
   end
+  def get_by_username(username) when is_nil(username) do
+    nil
+  end
+
+  def get_by_username(username) do
+    Repo.get_by(User, username: username)
+  end
 
   @doc """
   Returns the list of users.

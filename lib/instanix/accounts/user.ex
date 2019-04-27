@@ -2,6 +2,7 @@ defmodule Instanix.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
   alias Comeonin.Bcrypt
+  @derive {Phoenix.Param, key: :username}
 
   schema "users" do
     field :about, :string

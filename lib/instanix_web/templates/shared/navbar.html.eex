@@ -20,8 +20,8 @@
             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
           </div>
           <div class="items-center absolute border border-t-0 rounded-b-lg p-1 bg-white p-2 invisible group-hover:visible w-full">
-           <a href="#" class="dropdown-item">View Profile</a>
-           <a href="#" class="dropdown-item">Edit Profile</a>
+            <%= link "View Profile", to: Routes.user_path(@conn, :show, @current_user), class: "dropdown-item" %>
+            <a href="#" class="dropdown-item">Edit Profile</a>
            <hr class="border-t mx-2 border-gray-200">
            <%= link "Log out", to: Routes.session_path(@conn, :delete), method: :delete, class: "dropdown-item" %>
           </div>

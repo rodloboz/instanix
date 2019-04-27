@@ -6,6 +6,7 @@
 * Turbolinks
 * Tailwindcss 1.0
 * Webpack 4
+* PostgreSQL
 
 # DB Schema
 

@@ -1,33 +1,62 @@
-<h1>Show User</h1>
-
-<ul>
-
-  <li>
-    <strong>Username:</strong>
-    <%= @user.username %>
-  </li>
-
-  <li>
-    <strong>Email:</strong>
-    <%= @user.email %>
-  </li>
-
-  <li>
-    <strong>Encrypted password:</strong>
-    <%= @user.encrypted_password %>
-  </li>
-
-  <li>
-    <strong>Full name:</strong>
-    <%= @user.full_name %>
-  </li>
-
-  <li>
-    <strong>About:</strong>
-    <%= @user.about %>
-  </li>
-
-</ul>
-
-<span><%= link "Edit", to: Routes.user_path(@conn, :edit, @user) %></span>
-<span><%= link "Back", to: Routes.user_path(@conn, :index) %></span>
+<header class="flex mb-16" data-controller="follow-button">
+  <div class="flex-grow flex-shrink-0 flex-basis-0 mr-8 flex flex-col items-center">
+    <%= img_tag(avatar_url(@conn, @user) , class: "avatar avatar-4xl") %>
+  </div>
+  <section class="flex-grow-2 flex-basis-24">
+    <div class="flex items-center mb-2">
+      <h1 class="text-3xl font-light"><%= @user.username %></h1>
+      <%#= render 'follow_btn', user: @user %>
+    </div>
+    <ul class="flex mb-4">
+      <li class="mr-8"><span class="font-bold">29</span> posts</li>
+      <li class="mr-8">
+        <span id="followers-count"
+              class="font-bold"
+              data-target="follow-button.followerCount"><%#= @user.followers_count %></span>&nbsp
+        <span data-target="follow-button.followerMessage"></span>
+      </li>
+      <li>
+        <span id="followings-count" class="font-bold">
+          <%#= @user.followings_count %>
+        </span> following
+      </li>
+    </ul>
+    <div>
+      <h2 class="font-bold"><%= @user.full_name %></h2>
+      <span>Software developer 💻 | Photographer 📷 | Traveller 🎒</span>
+    </div>
+  </section>
+</header>
+<div class="border-t flex items-center justify-center text-gray-600 uppercase text-sm text-medium">
+  <a href="#" class="mr-8 h-12 flex items-center border-t border-black text-black">
+    <span>
+      <i class="fas fa-th-large"></i>
+      <span class="ml-1">Posts</span>
+    </span>
+  </a>
+  <a href="#" class="h-12 flex items-center">
+    <span>
+      <i class="fas fa-portrait"></i>
+      <span class="ml-1">Tagged</span>
+    </span>
+  </a>
+</div>
+<div>
+  <div class="grid text-center mb-10">
+    <div class="w-full">
+      <img src="https://unsplash.it/293" alt="" class="object-cover" style="margin: 0 !important">
+    </div>
+    <div>
+      <img src="https://unsplash.it/293" alt="" class="object-cover">
+    </div>
+    <div>
+      <img src="https://unsplash.it/293" alt="" class="object-cover">
+    </div>
+    <div>
+      <img src="https://unsplash.it/293" alt="" class="object-cover">
+    </div>
+    <div>
+      <img src="https://unsplash.it/293" alt="" class="object-cover">
+    </div>
+  </div>
+</div>

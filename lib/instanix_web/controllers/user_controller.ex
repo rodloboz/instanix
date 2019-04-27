@@ -9,8 +9,8 @@ defmodule InstanixWeb.UserController do
     render(conn, "index.html", users: users)
   end
 
-  def show(conn, %{"id" => id}) do
-    user = Accounts.get_user!(id)
+  def show(conn, %{"username" => username}) do
+    user = Accounts.get_by_username(username)
     render(conn, "show.html", user: user)
   end
 
