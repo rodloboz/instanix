@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(Instaphoenix.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(Instanix.Repo, :manual)

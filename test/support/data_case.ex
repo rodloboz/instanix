@@ -1,4 +1,4 @@
-defmodule Instaphoenix.DataCase do
+defmodule Instanix.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -16,20 +16,20 @@ defmodule Instaphoenix.DataCase do
 
   using do
     quote do
-      alias Instaphoenix.Repo
+      alias Instanix.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import Instaphoenix.DataCase
+      import Instanix.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Instaphoenix.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Instanix.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Instaphoenix.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Instanix.Repo, {:shared, self()})
     end
 
     :ok

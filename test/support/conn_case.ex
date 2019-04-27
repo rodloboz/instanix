@@ -1,4 +1,4 @@
-defmodule InstaphoenixWeb.ConnCase do
+defmodule InstanixWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -19,18 +19,18 @@ defmodule InstaphoenixWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      alias InstaphoenixWeb.Router.Helpers, as: Routes
+      alias InstanixWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint InstaphoenixWeb.Endpoint
+      @endpoint InstanixWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Instaphoenix.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Instanix.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Instaphoenix.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Instanix.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

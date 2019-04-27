@@ -1,4 +1,4 @@
-## Instaphoenix: Instagram Clone
+## Instanix: Instagram Clone
 
 # Stack
 
@@ -15,7 +15,7 @@
 
 Clone:
 
-    git clone git@github.com:rodloboz/instaphoenix.git
+    git clone git@github.com:rodloboz/instanix.git
 
 Dependencies:
 

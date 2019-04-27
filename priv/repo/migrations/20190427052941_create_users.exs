@@ -1,4 +1,4 @@
-defmodule Instaphoenix.Repo.Migrations.CreateUsers do
+defmodule Instanix.Repo.Migrations.CreateUsers do
   use Ecto.Migration
 
   def change do

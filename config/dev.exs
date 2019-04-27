@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :instaphoenix, InstaphoenixWeb.Endpoint,
+config :instanix, InstanixWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -46,13 +46,13 @@ config :instaphoenix, InstaphoenixWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :instaphoenix, InstaphoenixWeb.Endpoint,
+config :instanix, InstanixWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
-      ~r{lib/instaphoenix_web/views/.*(ex)$},
-      ~r{lib/instaphoenix_web/templates/.*(eex)$}
+      ~r{lib/instanix_web/views/.*(ex)$},
+      ~r{lib/instanix_web/templates/.*(eex)$}
     ]
   ]
 
@@ -67,9 +67,9 @@ config :phoenix, :stacktrace_depth, 20
 config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
-config :instaphoenix, Instaphoenix.Repo,
+config :instanix, Instanix.Repo,
   username: "postgres",
   password: "postgres",
-  database: "instaphoenix_dev",
+  database: "instanix_dev",
   hostname: "localhost",
   pool_size: 10

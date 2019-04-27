@@ -1,9 +1,9 @@
-defmodule Instaphoenix.MixProject do
+defmodule Instanix.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :instaphoenix,
+      app: :instanix,
       version: "0.1.0",
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule Instaphoenix.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Instaphoenix.Application, []},
+      mod: {Instanix.Application, []},
       extra_applications: [:logger, :runtime_tools, :httpoison]
     ]
   end

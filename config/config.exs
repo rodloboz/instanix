@@ -7,15 +7,15 @@
 # General application configuration
 use Mix.Config
 
-config :instaphoenix,
-  ecto_repos: [Instaphoenix.Repo]
+config :instanix,
+  ecto_repos: [Instanix.Repo]
 
 # Configures the endpoint
-config :instaphoenix, InstaphoenixWeb.Endpoint,
+config :instanix, InstanixWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "aXlxs9wCAPbnBAEn0SXKYp+6GjkvaS0SAK9RZnVs2gg8jKDxsaxeRim5Os1pzi0S",
-  render_errors: [view: InstaphoenixWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Instaphoenix.PubSub, adapter: Phoenix.PubSub.PG2]
+  render_errors: [view: InstanixWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Instanix.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,

@@ -1,4 +1,4 @@
-defmodule Instaphoenix.Repo.Migrations.AddAvatarToUsers do
+defmodule Instanix.Repo.Migrations.AddAvatarToUsers do
   use Ecto.Migration
 
   def change do
