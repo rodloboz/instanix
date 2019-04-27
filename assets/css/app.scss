@@ -1,0 +1,9 @@
+/* This file is for your main application css. */
+@import '~tailwindcss/base';
+@import '~tailwindcss/components';
+@import '~tailwindcss/utilities';
+
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+@import 'base/index';
+@import 'components/index';
