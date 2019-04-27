@@ -12,7 +12,9 @@
     </div>
     <div>
       <button class="btn btn-blue">Log In</button>
-      <button class="btn btn-white ml-2">Sign Up</button>
+      <%= link to: Routes.registration_path(@conn, :new) do %>
+        <button class="btn btn-white ml-2">Sign Up</button>
+      <% end %>
     </div>
   </div>
 </nav>

@@ -17,7 +17,8 @@ defmodule InstaphoenixWeb.Router do
     pipe_through :browser
 
     get "/", UserController, :index
-    resources "/registrations", UserController, only: [:new, :create]
+    get "accounts/emailsignup/", RegistrationController, :new
+    resources "/registrations", RegistrationController, only: [:create]
   end
 
   # Other scopes may use custom stacks.
